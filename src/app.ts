@@ -7,13 +7,15 @@ import imageRoutes from "./routes/Image";
 const app = express();
 
 // settings
-app.set("port", process.env.PORT || 3000);
+app.set("port", process.env.PORT || 5000);
 
 // middlewares
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(morgan("dev"));
 app.use(cors());
 
 // routes
 app.use("/api/images", imageRoutes);
 
-export default app
+export default app;

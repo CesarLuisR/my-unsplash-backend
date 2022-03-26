@@ -1,0 +1,22 @@
+@api = http://localhost:5000/api/images
+
+### GET IMAGES
+GET {{api}}/get-images
+
+### ADD IMAGE
+POST {{api}}/add-image
+Content-Type: application/json
+
+{
+    "label": "label of the image one",
+    "url": "any url of the image",
+    "password": "password of the image"
+}
+
+### DELETE IMAGE
+DELETE {{api}}/delete-image/623f2d69a62bcf8ef5a6f038
+Content-Type: application/json
+
+{
+    "password": "password of the image"
+}
