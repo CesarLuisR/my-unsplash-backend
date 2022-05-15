@@ -1,22 +1,16 @@
-@api = http://localhost:5000/api/images
+@api = http://localhost:5000/api/photos
 
-### GET IMAGES
-GET {{api}}/get-images
+### GET PHOTOS
+GET {{api}}/get-photos
 
-### ADD IMAGE
-POST {{api}}/add-image
+### ADD PHOTO
+POST {{api}}/add-photo
 Content-Type: application/json
 
 {
     "label": "label of the image one",
-    "url": "any url of the image",
-    "password": "password of the image"
+    "url": "any url of the image"
 }
 
-### DELETE IMAGE
-DELETE {{api}}/delete-image/623f2d69a62bcf8ef5a6f038
-Content-Type: application/json
-
-{
-    "password": "password of the image"
-}
+### DELETE PHOTO
+DELETE {{api}}/delete-photo/6251e28731124eeff02082d1

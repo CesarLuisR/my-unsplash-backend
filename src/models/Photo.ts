@@ -1,6 +1,6 @@
 import { Schema, model } from "mongoose";
 
-const ImageSchema = new Schema({
+const PhotoSchema = new Schema({
   label: {
     type: String,
     required: true,
@@ -10,11 +10,9 @@ const ImageSchema = new Schema({
     type: String,
     required: true,
   },
-  password: {
-    type: String,
-    required: true,
-  }
+}, {
+  timestamps: true,
 });
 
 
-export default model("Image", ImageSchema);
+export default model("Photo", PhotoSchema);
